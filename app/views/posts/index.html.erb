@@ -1,19 +1,15 @@
 <h1>Posts</h1>
 
-<ul>
+<div id='separator'></div> 
+<div>
   <% @posts.each do |post| %>
     <h2><%= link_to post.title, post %></h2>
-    <p><%= post.body %></p>
-    <li>
-      <%= post.updated_at %>
-    </li>
-    <li>
-      Posted by: <%= post.user.name %>
-    </li>
-    <li>
-      Number of Comments: <%= post.comments.size %>
-    </li>
+    <h4><%= post.body %></strong></h4>
+    <p>Posted by: <%= post.user.name %><br/>
+    <%= post.comments.size %> comments </p>
+    <p>Updated <%= post.updated_at %></p>
+    <div id='separator'></div> 
   <% end %>
-</ul>
+</div>
 
 <%= link_to "New Post", new_post_path %>
