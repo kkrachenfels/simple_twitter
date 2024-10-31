@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :check_logged_in 
 
   def index
-    @posts = Post.all
+    @posts = Post.order(:updated_at)
   end
 
   def show

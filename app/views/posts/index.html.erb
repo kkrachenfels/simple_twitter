@@ -2,8 +2,15 @@
 
 <ul>
   <% @posts.each do |post| %>
+    <h2><%= link_to post.title, post %></h2>
     <li>
-      <%= link_to post.title, post %>
+      <%= post.updated_at %>
+    </li>
+    <li>
+      Posted by: <%= post.user.name %>
+    </li>
+    <li>
+      Number of Comments: <%= post.comments.size %>
     </li>
   <% end %>
 </ul>
