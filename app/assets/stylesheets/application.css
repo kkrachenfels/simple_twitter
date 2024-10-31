@@ -32,3 +32,62 @@ ul {
     margin-left: 100px;
     margin-right: 100px;
 }
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 600px; /* Optional: sets a maximum width to prevent it from growing too large on big screens */
+    margin: 16px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.login {
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.login p {
+    margin: 0; /* Removes any default margin from the <p> */
+}
+
+.login a {
+    margin-left: 10px; /* Adds some space between the welcome message and the link */
+}
+
+/* Universal button styling */
+button {
+    background-color: #1DA1F2; /* Twitter blue */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 12px 20px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #0d95e8; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
+}
+
+/* Active effect */
+button:active {
+    background-color: #1A91DA; /* Even darker blue when active */
+    transform: scale(0.95); /* Slightly shrink when clicked */
+}
+
+/* Disabled state */
+button:disabled {
+    background-color: #AAB8C2; /* Grey for disabled */
+    color: white; /* Keep text color white */
+    cursor: not-allowed; /* Not allowed cursor */
+}
