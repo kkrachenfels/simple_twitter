@@ -3,6 +3,7 @@
 <ul>
   <% @posts.each do |post| %>
     <h2><%= link_to post.title, post %></h2>
+    <p><%= post.body %></p>
     <li>
       <%= post.updated_at %>
     </li>
