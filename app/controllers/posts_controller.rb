@@ -39,10 +39,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    puts "++++++++"
     @post = Post.find(params[:id])
     result = @post.destroy!
-    puts "++++++++"
     puts result
 
     redirect_to root_path, status: :see_other
