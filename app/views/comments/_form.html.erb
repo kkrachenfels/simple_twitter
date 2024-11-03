@@ -3,7 +3,7 @@
       <%= form.label :body %><br>
       <%= form.text_area :body %>
     </p>
-    <% if @comment&.errors %> <!-- Check if there are errors on the comment -->
+    <% if @comment&.errors %> 
     <div class="error-messages">
       <% @comment.errors.full_messages.each do |message| %>
         <div><%= message %></div>
