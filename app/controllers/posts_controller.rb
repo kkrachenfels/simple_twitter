@@ -50,4 +50,10 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body)
     end
+  
+    private
+
+    def render_not_found
+      render file: "#{Rails.root}/public/404.html", status: :not_found
+    end
 end

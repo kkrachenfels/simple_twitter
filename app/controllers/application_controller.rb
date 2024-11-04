@@ -3,7 +3,14 @@ class ApplicationController < ActionController::Base
   allow_browser versions: :modern
 
   helper_method :current_user, :log_in, :log_out, :check_logged_in
+  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
 
+  private
+
+  def render_not_found
+    render file: "#{Rails.root}/public/404.html", status: :not_found
+  end
+  
   def check_logged_in
       unless !current_user.nil?
         #store_location
